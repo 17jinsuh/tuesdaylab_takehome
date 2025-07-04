@@ -1,0 +1,10 @@
+<launch>
+    <!-- Run `ros2 run algorithms guicli_pose` in a separate terminal -->
+    <node pkg="turtlesim" exec="turtlesim_node"/>
+    <node pkg="algorithms" exec="pose_manager">
+        <param from="$(find-pkg-share bringup)/config/robot_config.yaml"/>
+    </node>
+    <node pkg="algorithms" exec="motion_controller">
+        <param from="$(find-pkg-share bringup)/config/robot_config.yaml"/>
+    </node>
+</launch>

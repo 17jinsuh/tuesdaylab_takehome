@@ -1,0 +1,9 @@
+<launch>
+    <!-- Run `ros2 run algorithms guicli_pose` in a separate terminal -->
+    <node pkg="algorithms" exec="clock_pose_issuer">
+        <param name="timer_period" value="5.0"/>
+    </node>
+    <node pkg="algorithms" exec="pose_manager">
+        <param name="gui_timeout_seconds" value="20.0"/>
+    </node>
+</launch>

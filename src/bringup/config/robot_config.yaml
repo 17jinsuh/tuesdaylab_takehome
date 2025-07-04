@@ -1,0 +1,15 @@
+/clock_pose_issuer:
+  ros__parameters:
+    timer_period: 5.0
+
+/pose_manager:
+  ros__parameters::
+    gui_timeout_seconds: 30.0
+
+/motion_controller:
+  ros__parameters:
+    kp_linear: 0.5
+    kp_angular: 1.0
+    distance_threshold: 0.1
+    angle_threshold: 0.1
+    control_loop_timer_period: 1.0
